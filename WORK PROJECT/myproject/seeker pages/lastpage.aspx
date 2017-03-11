@@ -413,10 +413,7 @@ background-size: 100% 80px;
 
 
 
-    function datasubmit() {
-        alert("YOur Account is Created Successfully !!!");
-
-    }
+    
 
 </script>
 

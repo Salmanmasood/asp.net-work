@@ -23,19 +23,6 @@ namespace myproject
 
             int x = 5;
 
-            //a[0] = "A+";
-            //a[1] = "A";
-            //a[2] = "B";
-            //a[3] = "C";
-
-            //for (int i = 0; i < a.Length; i++)
-            //{
-            //    ddlgrades_ssc.Items.Add(a[i].ToString());
-            //    DropDownList1.Items.Add(a[i].ToString());
-            //    DropDownList3.Items.Add(a[i].ToString());
-            //    DropDownList5.Items.Add(a[i].ToString());
-
-            //}
             for (int i = 0; i < percentage.Length; i++)
             {
                 percentage[i] = x * 10;
@@ -108,37 +95,22 @@ namespace myproject
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
-           // loginmethod()
+            loginmethod();
 
 
             Returnclass rc = new Returnclass();
-            string x = rc.scalarReturn("select max(login_id) from login_information");
-            int y = int.Parse(x);
-            y +=1;
-
+            string y = rc.scalarReturn("select max(login_id) from login_information");
             Session["c_img_id"] = y.ToString();
-           // Session["c_img_id"] = 5027;
-
             Session["scc_ins"] = txtinsti_ssc.Text;
             Session["hsc_ins"] = txtinsti_hsc.Text;
             Session["grad_ins"] = txt_insti_grad.Text;
             Session["masters_ins"] = txt_insti_master.Text;
-
-
-            
             Session["scc_percentage"] = ddlper_ssc.SelectedItem.ToString();
             Session["scc_grades"] = gradesfinder(Session["scc_percentage"].ToString());
-
-            
             Session["hsc_percentage"] = DropDownList2.SelectedItem.ToString();
             Session["hsc_grades"] = gradesfinder(Session["hsc_percentage"].ToString());
-
-            
             Session["grad_percentage"] = DropDownList4.SelectedItem.ToString();
             Session["grad_grades"] = gradesfinder(Session["grad_percentage"].ToString());
-
-
-            
             Session["masters_percentage"] = DropDownList6.SelectedItem.ToString();
             Session["masters_grades"] = gradesfinder(Session["masters_percentage"].ToString());
 
@@ -156,7 +128,6 @@ namespace myproject
             ssc[4] = Session["ssc"].ToString();
             ssc[5] = DropDownList0.SelectedItem.ToString();
             ssc[6] = DropDownList7.SelectedItem.ToString();
-
             //hsc
             hsc[0] = Session["hsc_grades"].ToString();
             hsc[1] = Session["hsc_percentage"].ToString();
@@ -187,21 +158,39 @@ namespace myproject
             //code......................................
 
 
+            personalinfomethod();
+            professionalinfomethod();
+            certificationalinfomethod(demo.Text);
 
-
-            string s = callallmethods(demo.Text);
-            insert_data da = new insert_data();
-
-            da.insert_s_h_m_g("@ssc_Grades", "@ssc_percentage", "@ssc_institute", "@ssc_degree", "@ssc_fk_id", "@scc_duration", "@scc_duration_END", "insert_scc_record", ssc);
-            insert_data da1 = new insert_data();
-            da1.insert_s_h_m_g("@hsc_Grades", "@hsc_percentage", "@hsc_institute", "@hsc_degree" ,"@hsc_fk_id","@hsc_duration","@HSC_duration_END" ,"insert_hsc_record", hsc);
-            insert_data da2 = new insert_data();
-
-            da2.insert_s_h_m_g("@grad_Grades", "@grad_percentage", "@grad_institute", "@grad_degree", "@grad_fk_id","@grad_duration","@grad_duration_end", "insert_grad_record", grad);
-
-            insert_data da3 = new insert_data();
-            da3.insert_s_h_m_g("@masters_Grades", "@masters_percentage", "@masters_institute", "@masters_degree", "@masters_fk_id", "@masters_duration", "@masters_duration_end", "insert_masters_record", masters);
+            if (txt_deg_master.Text!= " " && txt_insti_master.Text!=" ")
+            {
+                insert_data da3 = new insert_data();
+                da3.insert_s_h_m_g("@masters_Grades", "@masters_percentage", "@masters_institute", "@masters_degree", "@masters_fk_id", "@masters_duration", "@masters_duration_end", "insert_masters_record", masters);
             
+    
+            }
+            if (txt_deg_grad.Text!=" " && txt_insti_grad.Text!=" ")
+            {
+                insert_data da2 = new insert_data();
+                da2.insert_s_h_m_g("@grad_Grades", "@grad_percentage", "@grad_institute", "@grad_degree", "@grad_fk_id", "@grad_duration", "@grad_duration_end", "insert_grad_record", grad);
+                
+            }
+
+            if (txtdeg_hsc.Text!=" " && txtinsti_hsc.Text!=" ")
+            {
+                insert_data da1 = new insert_data();
+                da1.insert_s_h_m_g("@hsc_Grades", "@hsc_percentage", "@hsc_institute", "@hsc_degree", "@hsc_fk_id", "@hsc_duration", "@HSC_duration_END", "insert_hsc_record", hsc);
+                
+            }
+
+            if (txtinsti_ssc.Text!=" " && txtdeg_ssc.Text!=" ")
+            {
+                insert_data da = new insert_data();
+                da.insert_s_h_m_g("@ssc_Grades", "@ssc_percentage", "@ssc_institute", "@ssc_degree", "@ssc_fk_id", "@scc_duration", "@scc_duration_END", "insert_scc_record", ssc);
+                
+            }
+            
+
             //method calling for file uploaad..................................................................
             if (FileUpload1.HasFile)
             {
@@ -388,67 +377,7 @@ namespace myproject
 
 
 
-        public string callallmethods(string j)
-        {
-
-            bool x = true, y = true, z = true,  c = true, d = true;
-            x = loginmethod();
-           
-            y = personalinfomethod();
-            z = professionalinfomethod();
-           // a = educationalinfomethod();
-            c = certificationalinfomethod(j);
-           
-            string s = " ";
-            if (x == false)
-            {
-               s= s+ " Error at login method....";
-
-            }
-
-            if (d == false)
-            {
-               s= s+ " Error at complete edu method....";
-
-            }
-            if (y == false)
-            {
-                s = s + " Error at personal method....";
-
-            }
-
-
-            if (z == false)
-            {
-                s = s + " Error at professional method....";
-
-            }
-
-
-            //if (a == false)
-            //{
-            //    s = s + " Error at educational method....";
-
-            //}
-
-
-            if (c == false)
-            {
-                s = s + " Error at certificational method....";
-
-            }
-
-            else
-            {
-                s = "data is inserted successfully";
-            }
-
-            return s;
-
-        } //method end.................................
-
-
-
+       
 
         //method of file uploading.................................................................................................
         public string fileuploadmethod(FileUpload fileupload1, string id)

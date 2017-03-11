@@ -21,4 +21,3 @@ C:\Users\salman\Documents\Visual Studio 2013\Projects\string\WORK PROJECT\myproj
 C:\Users\salman\Documents\Visual Studio 2013\Projects\string\WORK PROJECT\myproject\bin\myproject.pdb
 C:\Users\salman\Documents\Visual Studio 2013\Projects\string\WORK PROJECT\myproject\obj\Debug\myproject.dll
 C:\Users\salman\Documents\Visual Studio 2013\Projects\string\WORK PROJECT\myproject\obj\Debug\myproject.pdb
-C:\Users\salman\Documents\Visual Studio 2013\Projects\string\WORK PROJECT\myproject\obj\Debug\myproject.csprojResolveAssemblyReference.cache

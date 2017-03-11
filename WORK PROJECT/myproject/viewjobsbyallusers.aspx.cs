@@ -110,6 +110,53 @@ namespace myproject
 
 
            
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+            Returnclass rc = new Returnclass();
+          
+             Session["username"].ToString();
+             ViewState["fkofresume"] = rc.scalarReturn("select inpersonalinfo_login_id_fk from personal_info_login_information where personal_name='" + Session["username"].ToString() + "'");
+          
+            
+            string y = rc.scalarReturn("select masters_degree from  masters_record where masters_fk_id=" + ViewState["fkofresume"].ToString());
+            if (y!=" ")
+            {
+                ViewState["education"] = y;
+            }
+            else
+            {
+               y= rc.scalarReturn("select grad_degree from grad_record where grad_fk_id="+ ViewState["fkofresume"].ToString());
+               if (y != " ")
+                {
+                    ViewState["education"] = y;
+                }
+
+               else
+               {
+                   y = rc.scalarReturn("select hsc_degree from  hsc_record where hsc_fk_id=" + ViewState["fkofresume"].ToString());
+                   if (y!=" ")
+                   {
+                       
+                   }
+
+
+               }
+
+
+            }
+            
+            
+            ViewState["functionalarea"] = rc.scalarReturn("select professional_functionalarea from professional_info_login_information where inprofessional_login_id_fk=" + Session["fkofresume"].ToString());
+            ViewState["lastdatetoapply"] = System.DateTime.Now.ToShortDateString();
+            ViewState["experience"] = rc.scalarReturn("select professional_experince from professional_info_login_information where inprofessional_login_id_fk=" + Session["fkofresume"].ToString());
+
+            
+
+
+
         } //method end...........
 
 
