@@ -19,7 +19,7 @@ namespace myproject
         private string connstring = ConfigurationManager.ConnectionStrings["jobportaldb"].ConnectionString;
 
 
-        public string DELETEMETHOD(string id, string TITLE, string proc,string P_id,string p_title)
+        public string DELETEMETHOD(string id, string proc,string sp_id)
         {
             string s = "";
             SqlConnection conn = new SqlConnection(connstring);
@@ -27,9 +27,8 @@ namespace myproject
             {
                 SqlCommand cmd = new SqlCommand(proc, conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.Add(P_id, SqlDbType.Int).Value = id;
-                cmd.Parameters.Add(p_title, SqlDbType.NVarChar, 20).Value = TITLE;
-                conn.Open();
+                cmd.Parameters.Add(sp_id, SqlDbType.Int).Value = id;
+               conn.Open();
                 cmd.ExecuteNonQuery();
 
 

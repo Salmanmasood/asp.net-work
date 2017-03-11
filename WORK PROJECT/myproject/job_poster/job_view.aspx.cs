@@ -188,11 +188,14 @@ namespace myproject.job_poster
 
         protected void Button2_Click(object sender, EventArgs e)
         {
+
+
             Returnclass rc = new Returnclass();
             string id = rc.scalarReturn("select job_id from job_title_tbl where job_title='"+Label1.Text+"'");
             DELETECLASS dc = new DELETECLASS();
-          id=  dc.DELETEMETHOD(id, Label1.Text, "deletejob", "@job_id", "@job_title");
-          Response.Write(id);
+            id = dc.DELETEMETHOD(id, "deleteajob", "@job_id");
+            Response.Redirect("~/job_poster/adminpannelofposteraspx.aspx");
+          
 
 
 

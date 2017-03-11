@@ -32,7 +32,7 @@ namespace myproject.job_poster
               ic.insert_job(txtjob_title.Text, txt_job_desc.Text, ddlfunctionalarea.SelectedItem.ToString(), ddljobsort.SelectedItem.ToString(),s);
               string y =rc.scalarReturn("select max(job_id) from job_title_tbl where job_fk_companyid="+s);
 
-              ic.insert_location(DropDownList2.SelectedItem.ToString(), DropDownList1.SelectedItem.ToString(), DropDownList3.SelectedItem.ToString(),y);
+              ic.insert_location(DropDownList2.SelectedItem.ToString(), DropDownList1.SelectedItem.ToString(),ddlcitywork.SelectedItem.ToString(),y);
 
               Session["companyid"] = s;
               Session["jobid"] = y;
@@ -74,6 +74,22 @@ namespace myproject.job_poster
             Session.RemoveAll();
             Session.Abandon();
             Response.Redirect("~/Index.aspx");
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/job_poster/viewresumes.aspx");
+
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/job_poster/adminpannelofposteraspx.aspx");
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/job_poster/closeajob.aspx");
         }
 
       

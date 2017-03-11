@@ -108,6 +108,9 @@ namespace myproject
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
+           // loginmethod()
+
+
             Returnclass rc = new Returnclass();
             string x = rc.scalarReturn("select max(login_id) from login_information");
             int y = int.Parse(x);

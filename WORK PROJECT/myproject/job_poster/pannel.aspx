@@ -12,6 +12,10 @@
      margin:0 auto;
      padding:0px;
      background-color:#808080;
+     background-image:url('../photos/White-Light-plain-Background-Design-Download.jpg');
+
+     background-size:100% 100% ;
+
  }
  #wrapper{
         
@@ -20,7 +24,7 @@
     
      width:80%;
      height:auto;
- 
+ background-image:url('../img/registration_banner_img.png');
  }      
   header
   {
@@ -35,9 +39,9 @@
   
    
      width:100%;
-     height:auto;
-       
-  
+     height:1000px;
+       background-image:url('../photos/White-Light-plain-Background-Design-Download.jpg');
+  background-size:100% 1000px ;
   }
  
 
@@ -61,16 +65,16 @@
   <h3>Admin Pannel</h3>
   <p>Select Tab To cahnge your Profile Information</p>
   <ul class="nav nav-pills nav-stacked" >
-    <li ><asp:Button ID="Button1" runat="server" Text="Log Out!" CssClass="btn btn-info btn-group-lg" OnClick="Button1_Click" /></li>
+    <li ><asp:Button ID="Button1" runat="server" Text="Log Out!" CssClass="btn btn-info btn-group-lg" OnClick="Button1_Click" Width="157px" /></li>
       
-    <li class="active"><a href="education_edit.aspx">Education</a></li>
-    <li><a href="contact_edit.aspx">Contact Information</a></li>
-    <li><a href="personal_edit.aspx">Personal Information</a></li>
+    <li><asp:Button ID="Button2" runat="server" Text="View Resumes" CssClass="btn btn-info btn-group-lg"  Width="157px" OnClick="Button2_Click" /> </li>
+    <li><asp:Button ID="Button3" runat="server" Text="Admin Pannel" CssClass="btn btn-info btn-group-lg" Width="157px" OnClick="Button3_Click" /> </li>
+    <li><asp:Button ID="Button5" runat="server" Text="Close a job" CssClass="btn btn-info btn-group-lg"  Width="157px" OnClick="Button5_Click" /> </li>
   </ul>
 </div>
 
 
-
+<img src="../img/123.jpg" style="width:100%;height:600px;margin-top:50px;" />
 
 
 
@@ -165,7 +169,7 @@
 
                 <div class="col-lg-12">
 
-                    <div class="col-lg-8"><asp:TextBox ID="txtjob_title" runat="server" Class="form-control" required="required" placeholder="Company Name"></asp:TextBox></div>
+                    <div class="col-lg-8"><asp:TextBox ID="txtjob_title" runat="server" Class="form-control"  placeholder="Company Name"></asp:TextBox></div>
                     
                     
 
@@ -182,7 +186,7 @@
 
                 <div class="col-lg-12" >
 
-                    <div class="col-lg-8"><asp:TextBox ID="txt_job_desc" runat="server" Class="form-control" required="required" placeholder="Company Description" TextMode="MultiLine"></asp:TextBox></div>
+                    <div class="col-lg-8"><asp:TextBox ID="txt_job_desc" runat="server" Class="form-control"  placeholder="Company Description" TextMode="MultiLine"></asp:TextBox></div>
 
 
                 </div>
@@ -261,17 +265,17 @@
 
 
 
-
-
-                  <div class="form-group" style="padding-top:40px;">
-      
-         <div class="col-lg-4"> <asp:Button ID="Button4" runat="server" CssClass="btn btn-success" Text="Post !" OnClick="Button4_Click" />
+                <div class="form-group">
+          <div class="col-sm-4"></div>
+                         <div class="col-sm-4">   
+                 <asp:Button ID="Button4" runat="server" CssClass="btn btn-success btn-lg" Text="Submit!" OnClick="Button4_Click" />
+         </div>
+                              <div class="col-sm-4"></div>
+                           
+                   
             </div>
-              <div class="col-lg-4">
-                  <asp:Label ID="lblMessage" runat="server" Text="Label"></asp:Label>
-
-                  </div>
-          </div>
+            
+                <img src="../img/postJobsBanner.jpg" style="width:100%;height:200px;margin-top:10px;" />
 
 
 
@@ -313,10 +317,7 @@
 
 
 
-
-
-            </div>
-
+       
 
 
 
@@ -324,7 +325,7 @@
        
 
 
-    </div>
+   
     </form>
 
     <script>

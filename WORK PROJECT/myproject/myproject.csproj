@@ -88,16 +88,21 @@
     <Content Include="css\bootstrap.css.map" />
     <Content Include="css\bootstrap.min.css.map" />
     <Content Include="img\1.jpg" />
+    <Content Include="img\123.jpg" />
     <Content Include="img\cover.png" />
     <Content Include="img\img-4119.jpg" />
     <Content Include="img\newlog.jpg" />
+    <Content Include="img\postJobsBanner.jpg" />
     <Content Include="Index.aspx" />
     <Content Include="job_poster\adminpannelofposteraspx.aspx" />
+    <Content Include="job_poster\closeajob.aspx" />
     <Content Include="job_poster\job_view.aspx" />
     <Content Include="job_poster\login_postjob.aspx" />
     <Content Include="job_poster\pannel.aspx" />
     <Content Include="job_poster\poster_signup.aspx" />
+    <Content Include="job_poster\viewresumes.aspx" />
     <Content Include="js\J-QUERY.JS" />
+    <Content Include="photos\White-Light-plain-Background-Design-Download.jpg" />
     <Content Include="seeker pages\cvtempaspx.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -251,6 +256,13 @@
     <Compile Include="job_poster\adminpannelofposteraspx.aspx.designer.cs">
       <DependentUpon>adminpannelofposteraspx.aspx</DependentUpon>
     </Compile>
+    <Compile Include="job_poster\closeajob.aspx.cs">
+      <DependentUpon>closeajob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_poster\closeajob.aspx.designer.cs">
+      <DependentUpon>closeajob.aspx</DependentUpon>
+    </Compile>
     <Compile Include="job_poster\job_view.aspx.cs">
       <DependentUpon>job_view.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -278,6 +290,13 @@
     </Compile>
     <Compile Include="job_poster\poster_signup.aspx.designer.cs">
       <DependentUpon>poster_signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job_poster\viewresumes.aspx.cs">
+      <DependentUpon>viewresumes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_poster\viewresumes.aspx.designer.cs">
+      <DependentUpon>viewresumes.aspx</DependentUpon>
     </Compile>
     <Compile Include="newclass.cs" />
     <Compile Include="postjobs_insertclass.cs" />

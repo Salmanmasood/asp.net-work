@@ -23,7 +23,8 @@ namespace myproject
                Button1.Visible = true;
                Button2.Visible = true;
                GridView1.Visible = false;
-
+               Button9.Visible = true;
+               Button10.Visible = true;
 
              
             }
@@ -37,7 +38,8 @@ namespace myproject
                 Button1.Visible = false;
                 Button2.Visible = false;
                 Returnclass re = new Returnclass();
-
+                Button9.Visible = false;
+                Button10.Visible = false;
                 Session["functtionalarea"] = re.scalarReturn
 ("select professional_functionalarea from professional_info_login_information p inner join login_information l on l.login_id=p.inprofessional_login_id_fk where l.login_email='" + Session["userid"] + "'");
                 Session["jobsort"] = re.scalarReturn

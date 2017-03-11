@@ -10,7 +10,7 @@
 namespace myproject.job_poster {
     
     
-    public partial class adminpannelofposteraspx {
+    public partial class closeajob {
         
         /// <summary>
         /// form1 control.

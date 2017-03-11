@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="adminpannelofposteraspx.aspx.cs" Inherits="myproject.job_poster.adminpannelofposteraspx" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="closeajob.aspx.cs" Inherits="myproject.job_poster.closeajob" %>
 
 <!DOCTYPE html>
 
@@ -120,20 +119,6 @@
 
 
 
-
-
-
-
-
-
-
-
-       
-
-
-
-        
-       
 
 
    

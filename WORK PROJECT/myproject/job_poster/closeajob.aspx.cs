@@ -7,12 +7,13 @@ using System.Web.UI.WebControls;
 
 namespace myproject.job_poster
 {
-    public partial class adminpannelofposteraspx : System.Web.UI.Page
+    public partial class closeajob : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
+
 
         protected void Button1_Click(object sender, EventArgs e)
         {
@@ -36,6 +37,5 @@ namespace myproject.job_poster
         {
             Response.Redirect("~/job_poster/closeajob.aspx");
         }
-
     }
 }
