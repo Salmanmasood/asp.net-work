@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{40C06FA7-7EE7-4881-83E1-6B804B18DDE7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>myproject</RootNamespace>
+    <AssemblyName>myproject</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Alljobs.aspx" />
+    <Content Include="assets\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="assets\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="assets\bootstrap\css\bootstrap.css" />
+    <Content Include="assets\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\bootstrap\js\bootstrap.js" />
+    <Content Include="assets\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\bootstrap\js\npm.js" />
+    <Content Include="assets\css\form-elements.css" />
+    <Content Include="assets\css\style.css" />
+    <Content Include="assets\font-awesome\css\font-awesome.css" />
+    <Content Include="assets\font-awesome\css\font-awesome.min.css" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="assets\ico\apple-touch-icon-114-precomposed.png" />
+    <Content Include="assets\ico\apple-touch-icon-144-precomposed.png" />
+    <Content Include="assets\ico\apple-touch-icon-57-precomposed.png" />
+    <Content Include="assets\ico\apple-touch-icon-72-precomposed.png" />
+    <Content Include="assets\ico\favicon.png" />
+    <Content Include="assets\img\backgrounds\1.jpg" />
+    <Content Include="assets\js\jquery-1.11.1.js" />
+    <Content Include="assets\js\jquery-1.11.1.min.js" />
+    <Content Include="assets\js\jquery.backstretch.js" />
+    <Content Include="assets\js\jquery.backstretch.min.js" />
+    <Content Include="assets\js\placeholder.js" />
+    <Content Include="assets\js\scripts.js" />
+    <Content Include="css\bootstrap-theme.css.map" />
+    <Content Include="css\bootstrap-theme.min.css.map" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="img\1.jpg" />
+    <Content Include="img\123.jpg" />
+    <Content Include="img\cover.png" />
+    <Content Include="img\img-4119.jpg" />
+    <Content Include="img\newlog.jpg" />
+    <Content Include="img\postJobsBanner.jpg" />
+    <Content Include="Index.aspx" />
+    <Content Include="job_poster\adminpannelofposteraspx.aspx" />
+    <Content Include="job_poster\closeajob.aspx" />
+    <Content Include="job_poster\job_view.aspx" />
+    <Content Include="job_poster\login_postjob.aspx" />
+    <Content Include="job_poster\pannel.aspx" />
+    <Content Include="job_poster\poster_signup.aspx" />
+    <Content Include="job_poster\viewresumes.aspx" />
+    <Content Include="js\J-QUERY.JS" />
+    <Content Include="photos\White-Light-plain-Background-Design-Download.jpg" />
+    <Content Include="job_poster\cvtempaspx.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="img\cover.jpg" />
+    <Content Include="img\exper.jpg" />
+    <Content Include="img\profile.png" />
+    <Content Include="img\registration_banner_img.png" />
+    <Content Include="js\profilepage.js" />
+    <Content Include="seeker pages\lastpage.aspx" />
+    <Content Include="seeker pages\pages\eidt profile\contact_edit.aspx" />
+    <Content Include="seeker pages\pages\eidt profile\education_edit.aspx" />
+    <Content Include="seeker pages\pages\eidt profile\Experience.aspx" />
+    <Content Include="seeker pages\pages\eidt profile\jobsforuser.aspx" />
+    <Content Include="seeker pages\pages\eidt profile\personal_edit.aspx" />
+    <Content Include="seeker pages\pages\home_profile.aspx" />
+    <Content Include="seeker pages\pages\profile_profile.aspx" />
+    <Content Include="profilepageaspx.aspx" />
+    <Content Include="seeker pages\user_login.aspx" />
+    <Content Include="StyleSheet1.css" />
+    <Content Include="test2.aspx" />
+    <Content Include="viewjobsbyallusers.aspx" />
+    <Content Include="WebForm1.aspx" />
+    <Content Include="assets\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="assets\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="assets\bootstrap\css\bootstrap.css.map" />
+    <Content Include="assets\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="assets\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="assets\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="assets\font-awesome\less\animated.less" />
+    <Content Include="assets\font-awesome\less\bordered-pulled.less" />
+    <Content Include="assets\font-awesome\less\core.less" />
+    <Content Include="assets\font-awesome\less\fixed-width.less" />
+    <Content Include="assets\font-awesome\less\font-awesome.less" />
+    <Content Include="assets\font-awesome\less\icons.less" />
+    <Content Include="assets\font-awesome\less\larger.less" />
+    <Content Include="assets\font-awesome\less\list.less" />
+    <Content Include="assets\font-awesome\less\mixins.less" />
+    <Content Include="assets\font-awesome\less\path.less" />
+    <Content Include="assets\font-awesome\less\rotated-flipped.less" />
+    <Content Include="assets\font-awesome\less\screen-reader.less" />
+    <Content Include="assets\font-awesome\less\stacked.less" />
+    <Content Include="assets\font-awesome\less\variables.less" />
+    <Content Include="assets\font-awesome\scss\font-awesome.scss" />
+    <Content Include="assets\font-awesome\scss\_animated.scss" />
+    <Content Include="assets\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="assets\font-awesome\scss\_core.scss" />
+    <Content Include="assets\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="assets\font-awesome\scss\_icons.scss" />
+    <Content Include="assets\font-awesome\scss\_larger.scss" />
+    <Content Include="assets\font-awesome\scss\_list.scss" />
+    <Content Include="assets\font-awesome\scss\_mixins.scss" />
+    <Content Include="assets\font-awesome\scss\_path.scss" />
+    <Content Include="assets\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="assets\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="assets\font-awesome\scss\_stacked.scss" />
+    <Content Include="assets\font-awesome\scss\_variables.scss" />
+    <Content Include="WebForm2.aspx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\bootstrap-theme.css" />
+    <Content Include="css\bootstrap-theme.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\Animals-Dog-House-icon.png" />
+    <Content Include="img\careericon.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\person-2-thumbnail.jpg" />
+    <Content Include="img\search-green-neon-icon.png" />
+    <Content Include="img\slide1.jpg" />
+    <Content Include="img\slide2.jpg" />
+    <Content Include="img\slide3.jpg" />
+    <Content Include="img\slide4.jpg" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery-3.1.1.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\npm.js" />
+    <Content Include="test.aspx" />
+    <Content Include="photos\building.jpg" />
+    <Content Include="photos\building2.jpg" />
+    <Content Include="photos\building3.jpg" />
+    <Content Include="photos\building4.jpg" />
+    <Content Include="photos\building5.jpg" />
+    <Content Include="photos\building6.jpg" />
+    <Content Include="photos\Capture.PNG" />
+    <Content Include="photos\img1.PNG" />
+    <Content Include="photos\login.jpg" />
+    <Content Include="photos\login2.jpg" />
+    <Content Include="photos\login3.jpg" />
+    <Content Include="photos\login4.jpg" />
+    <Content Include="photos\login5.jpg" />
+    <Content Include="photos\login6.jpg" />
+    <Content Include="photos\login7.jpg" />
+    <Content Include="photos\m1.PNG" />
+    <Content Include="photos\newlog.jpg" />
+    <Content Include="photos\q1.jpg" />
+    <Content Include="photos\q2.jpg" />
+    <Content Include="photos\resume.jpg" />
+    <Content Include="photos\resume2.jpg" />
+    <Content Include="photos\S1.jpg" />
+    <Content Include="photos\s10.jpg" />
+    <Content Include="photos\s11.jpg" />
+    <Content Include="photos\s12.jpg" />
+    <Content Include="photos\S2.jpg" />
+    <Content Include="photos\s3.jpg" />
+    <Content Include="photos\s4.jpg" />
+    <Content Include="photos\s5.jpg" />
+    <Content Include="photos\s6.jpg" />
+    <Content Include="photos\s7.jpg" />
+    <Content Include="photos\s8.jpg" />
+    <Content Include="photos\s9.jpg" />
+    <Content Include="photos\s_snip1.PNG" />
+    <Content Include="photos\s_snip2.PNG" />
+    <Content Include="photos\s_snip3.PNG" />
+    <Content Include="seeker pages\signuP.aspx" />
+    <Content Include="seeker pages\signup2.aspx" />
+    <Content Include="css\StyleSheet1.css" />
+    <Content Include="css\StyleSheet2.css" />
+    <Content Include="css\StyleSheet3.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alljobs.aspx.cs">
+      <DependentUpon>Alljobs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Alljobs.aspx.designer.cs">
+      <DependentUpon>Alljobs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DELETECLASS.cs" />
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job_poster\adminpannelofposteraspx.aspx.cs">
+      <DependentUpon>adminpannelofposteraspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_poster\adminpannelofposteraspx.aspx.designer.cs">
+      <DependentUpon>adminpannelofposteraspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job_poster\closeajob.aspx.cs">
+      <DependentUpon>closeajob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_poster\closeajob.aspx.designer.cs">
+      <DependentUpon>closeajob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job_poster\job_view.aspx.cs">
+      <DependentUpon>job_view.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_poster\job_view.aspx.designer.cs">
+      <DependentUpon>job_view.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job_poster\login_postjob.aspx.cs">
+      <DependentUpon>login_postjob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_poster\login_postjob.aspx.designer.cs">
+      <DependentUpon>login_postjob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job_poster\pannel.aspx.cs">
+      <DependentUpon>pannel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_poster\pannel.aspx.designer.cs">
+      <DependentUpon>pannel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job_poster\poster_signup.aspx.cs">
+      <DependentUpon>poster_signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_poster\poster_signup.aspx.designer.cs">
+      <DependentUpon>poster_signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="job_poster\viewresumes.aspx.cs">
+      <DependentUpon>viewresumes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_poster\viewresumes.aspx.designer.cs">
+      <DependentUpon>viewresumes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="newclass.cs" />
+    <Compile Include="postjobs_insertclass.cs" />
+    <Compile Include="job_poster\cvtempaspx.aspx.cs">
+      <DependentUpon>cvtempaspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="job_poster\cvtempaspx.aspx.designer.cs">
+      <DependentUpon>cvtempaspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="insert_data.cs" />
+    <Compile Include="seeker pages\lastpage.aspx.cs">
+      <DependentUpon>lastpage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seeker pages\lastpage.aspx.designer.cs">
+      <DependentUpon>lastpage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seeker pages\pages\eidt profile\jobsforuser.aspx.cs">
+      <DependentUpon>jobsforuser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seeker pages\pages\eidt profile\jobsforuser.aspx.designer.cs">
+      <DependentUpon>jobsforuser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seeker pages\pages\eidt profile\contact_edit.aspx.cs">
+      <DependentUpon>contact_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seeker pages\pages\eidt profile\contact_edit.aspx.designer.cs">
+      <DependentUpon>contact_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seeker pages\pages\eidt profile\education_edit.aspx.cs">
+      <DependentUpon>education_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seeker pages\pages\eidt profile\education_edit.aspx.designer.cs">
+      <DependentUpon>education_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seeker pages\pages\eidt profile\Experience.aspx.cs">
+      <DependentUpon>Experience.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seeker pages\pages\eidt profile\Experience.aspx.designer.cs">
+      <DependentUpon>Experience.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seeker pages\pages\eidt profile\personal_edit.aspx.cs">
+      <DependentUpon>personal_edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seeker pages\pages\eidt profile\personal_edit.aspx.designer.cs">
+      <DependentUpon>personal_edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seeker pages\pages\home_profile.aspx.cs">
+      <DependentUpon>home_profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seeker pages\pages\home_profile.aspx.designer.cs">
+      <DependentUpon>home_profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seeker pages\pages\profile_profile.aspx.cs">
+      <DependentUpon>profile_profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seeker pages\pages\profile_profile.aspx.designer.cs">
+      <DependentUpon>profile_profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="profilepageaspx.aspx.cs">
+      <DependentUpon>profilepageaspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="profilepageaspx.aspx.designer.cs">
+      <DependentUpon>profilepageaspx.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Returnclass.cs" />
+    <Compile Include="seeker pages\signuP.aspx.cs">
+      <DependentUpon>signuP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seeker pages\signuP.aspx.designer.cs">
+      <DependentUpon>signuP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seeker pages\signup2.aspx.cs">
+      <DependentUpon>signup2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seeker pages\signup2.aspx.designer.cs">
+      <DependentUpon>signup2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="seeker pages\user_login.aspx.cs">
+      <DependentUpon>user_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="seeker pages\user_login.aspx.designer.cs">
+      <DependentUpon>user_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test2.aspx.cs">
+      <DependentUpon>test2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test2.aspx.designer.cs">
+      <DependentUpon>test2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="updateclass.cs" />
+    <Compile Include="viewjobsbyallusers.aspx.cs">
+      <DependentUpon>viewjobsbyallusers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewjobsbyallusers.aspx.designer.cs">
+      <DependentUpon>viewjobsbyallusers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5481</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5481/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
